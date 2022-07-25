@@ -84,13 +84,13 @@
       "value": null
     },
     "MgmtPublicIPAddressName": {
-      "value": null
+      "value": "vm-servies-pib-mgmt"
     },
     "UntrustPublicIP": {
       "value": "none"
     },
     "UntrustPublicIPAddressName": {
-      "value": null
+      "value": "vm-servies-pib-untrust"
     },
     "UntrustPublicIPRGName": {
       "value": null
