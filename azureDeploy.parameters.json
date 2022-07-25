@@ -1,75 +1,126 @@
 {
-  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
     "nsgName": {
-      "value": "nsg-default1"
+      "value": "NSG-NVA-VPN-USE2"
     },
     "srcIPInboundNSG": {
-      "value": "199.167.55.50/32"
+      "value": "0.0.0.0/0"
     },
     "virtualNetworkName": {
-      "value": "panw"
+      "value": "vnet-FW"
     },
     "virtualNetworkExistingRGName": {
-      "value": "smeast19"
+      "value": "vn-transit-use2-01"
+    },
+    "vnetNewOrExisting": {
+      "value": "existing"
     },
     "virtualNetworkAddressPrefix": {
-      "value": "192.168.0.0/16"
+      "value": "172.31.0.0/20"
     },
-    "lbName": {
-      "value": "public-lb"
+    "subnet0Name": {
+      "value": "SN-VPN-USE2-Mgmt"
+    },
+    "subnet1Name": {
+      "value": "SN-VPN-USE2-Untrusted"
+    },
+    "subnet2Name": {
+      "value": "SN-VPN-USE2-Trusted"
+    },
+    "subnet0Prefix": {
+      "value": "172.31.0.0/24"
+    },
+    "subnet1Prefix": {
+      "value": "172.31.2.0/24"
+    },
+    "subnet2Prefix": {
+      "value": "172.31.1.0/24"
     },
     "dnsNameforLBIP": {
-      "value": "publiclbdnslb51g"
+      "value": "GPVPN"
+    },
+    "lbName": {
+      "value": "ELB-VPN-USE2-UNTRUST"
+    },
+    "publicLoadBalancePIPName": {
+      "value": "ELB-VPN-USE2-PIP1"
     },
     "availabilitySetName": {
-      "value": "myPublicAV"
+      "value": null
     },
-    "adminUsername": {
-      "value": "samisra"
+    "platformFaultDomainCount": {
+      "value": "3"
     },
-    "adminPassword": {
-      "value": "Hello!"
+    "platformUpdateDomainCount": {
+      "value": "20"
     },
-    "storageAccountName": {
-      "value": "storagesmeast19"
+    "vmCount": {
+      "value": 2
     },
     "vmName": {
-      "value": "vmname-6t19"
+      "value": "azplnva10"
+    },
+    "Email": {
+      "value": "sjohnson4@coke-bsna.com"
+    },
+    "vmSize": {
+      "value": "Standard_D8_v3""
+    },
+    "adminUsername": {
+      "value": "bsnaadmin"
+    },
+    "adminPassword": {
+      "value": "G4me2no!!"
+    },
+    "baseUrl": {
+      "value": "https://raw.githubusercontent.com/PaloAltoNetworks/azure-load-balancer1/master/"
     },
     "MgmtPublicIP": {
-      "value": "new"
+      "value": "none"
+    },
+    "MgmtPublicIPRGName": {
+      "value": null
     },
     "MgmtPublicIPAddressName": {
-      "value": "dnsnamemgmt19"
+      "value": null
     },
     "UntrustPublicIP": {
       "value": "none"
     },
     "UntrustPublicIPAddressName": {
-      "value": "dnsnameuntrust522"
+      "value": null
     },
-    "vmSize": {
-      "value": "Standard_D3"
+    "UntrustPublicIPRGName": {
+      "value": null
+    },
+    "storageAccountName": {
+      "value": "paloaltovpndeployment"
+    },
+    "storageAccountNewOrExisting": {
+      "value": "existing"
+    },
+    "storageAccountExistingRG": {
+      "value": "RG-Network-VPN-Prod"
+    },
+    "storageAccountType": {
+      "value": "Standard_LRS"
     },
     "Bootstrap": {
       "value": "no"
     },
     "BootstrapUri": {
-      "value": "https://samisravhddata.blob.core.windows.net/data/bootstrap-20.vhd.vhd"
+      "value": null
     },
     "BootstrapUriSizeGB": {
-      "value": "20"
+      "value": "1"
     },
-    "lbName": {
-      "value": "public-lb"
+    "authenticationType": {
+      "value": "password"
     },
-    "availabilitySetName": {
-      "value": "myPublicAV"
-    },
-    "vmCount": {
-      "value": 2
+    "sshKey": {
+      "value": null
     },
     "LoadBalancerType": {
       "value": "layer-7"

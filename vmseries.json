@@ -43,13 +43,14 @@
           "Standard_D3_v2",
           "Standard_D4_v2",
           "Standard_D5_v2",
+		  "Standard_D8_v3",
           "Standard_D14_v2", 
           "Standard_A4"
        ],
        "metadata": {
           "description": "Azure VM size for VM-Series"
        },
-       "defaultValue": "Standard_D3"
+       "defaultValue": "Standard_D8_v3""
     },
     "virtualNetworkName": { 
       "type": "string",
@@ -335,7 +336,7 @@
             "value": "[variables('location')]"
           },
           "nicName": {
-            "value": "[concat(variables('nicName'), copyindex())]"
+            "value": "[concat(variables('nicName'), copyindex(1))]"
           },
           "subnet0Name": {
             "value": "[parameters('subnet0Name')]"
@@ -353,7 +354,7 @@
             "value": "[parameters('virtualNetworkExistingRGName')]"
           },
           "MgmtPublicIPAddressName": {
-            "value": "[concat(parameters('MgmtPublicIPAddressName'), copyindex())]"
+            "value": "[concat(parameters('MgmtPublicIPAddressName'), copyindex(1))]"
           },
           "MgmtPublicIPRGName": {
             "value": "[parameters('MgmtPublicIPRGName')]"
@@ -362,7 +363,7 @@
             "value": "[parameters('MgmtPublicIP')]"
           },
           "UntrustPublicIPAddressName": {
-            "value": "[concat(parameters('UntrustPublicIPAddressName'), copyindex())]"
+            "value": "[concat(parameters('UntrustPublicIPAddressName'), copyindex(1))]"
           },
           "UntrustPublicIP": {
             "value": "[parameters('UntrustPublicIP')]"
@@ -396,7 +397,7 @@
             "value": "[variables('location')]"
           },
           "vmName": {
-            "value": "[concat(parameters('vmName'), copyindex())]"
+            "value": "[concat(parameters('vmName'), copyindex(3))]"
           },
           "imageSku": {
             "value": "[variables('imageSku')]"
