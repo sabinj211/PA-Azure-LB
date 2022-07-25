@@ -4,7 +4,7 @@
   "parameters": {
     "nsgName": {
       "type": "string",
-      "defaultValue": "nsg-default1"
+      "defaultValue": ""
     },
     "srcIPInboundNSG": {
        "type": "string",
@@ -15,7 +15,7 @@
     },
     "virtualNetworkName": {
       "type": "string",
-      "defaultValue": "vnet-FW",
+      "defaultValue": "",
       "metadata": {
         "description": "VNET name"
       }
@@ -29,7 +29,7 @@
     },
     "vnetNewOrExisting": {
             "type": "string",
-            "defaultValue": "new",
+            "defaultValue": "existing",
             "allowedValues": [
                 "new",
                 "existing"
@@ -40,49 +40,49 @@
     },
     "virtualNetworkAddressPrefix": {
       "type": "string",
-      "defaultValue": "192.168.0.0/16",
+      "defaultValue": "",
       "metadata": {
         "description": "CIDR for vnet"
       }
     },
     "subnet0Name": {
       "type": "string",
-      "defaultValue": "Mgmt",
+      "defaultValue": "",
       "metadata": {
         "description": "Subnet for Management"
       }
     },
     "subnet1Name": {
       "type": "string",
-      "defaultValue": "Untrust",
+      "defaultValue": "",
       "metadata": {
         "description": "Subnet for Untrust"
       }
     },
     "subnet2Name": {
       "type": "string",
-      "defaultValue": "Trust",
+      "defaultValue": "",
       "metadata": {
         "description": "Subnet for Trust"
       }
     },
     "subnet0Prefix": {
       "type": "string",
-      "defaultValue": "192.168.0.0/24",
+      "defaultValue": "",
       "metadata": {
         "description": "Mgmt subnet CIDR"
       }
     },
     "subnet1Prefix": {
       "type": "string",
-      "defaultValue": "192.168.1.0/24",
+      "defaultValue": "",
       "metadata": {
         "description": "Untrust subnet CIDR"
       }
     },
     "subnet2Prefix": {
       "type": "string",
-      "defaultValue": "192.168.2.0/24",
+      "defaultValue": "",
       "metadata": {
         "description": "Trust subnet CIDR"
       }
@@ -95,14 +95,14 @@
     },
     "lbName": {
       "type": "string",
-      "defaultValue": "myPublicLB",
+      "defaultValue": "",
       "metadata": {
         "description": "Public Load Balancer name"
       }
     },
     "publicLoadBalancePIPName": {
       "type": "string",
-      "defaultValue": "mypubliciploadbal",
+      "defaultValue": "",
       "metadata": {
         "description": "Public Load Balancer Public IP Name"
       }
@@ -139,7 +139,7 @@
        "metadata": {
           "description": "Name of VM-Series VM in the Azure portal"
        },  
-       "defaultValue": "VM-Series"
+       "defaultValue": "azplnva10"
     },
     "Email": {
        "type": "string",
@@ -188,7 +188,7 @@
     },
     "MgmtPublicIP": {
       "type": "string",
-      "defaultValue": "new",
+      "defaultValue": "none",
       "allowedValues": [
         "new",
         "none"
@@ -206,7 +206,7 @@
     },
     "MgmtPublicIPAddressName": {
       "type": "string",
-      "defaultValue": "vm-servies-pib-mgmt",
+      "defaultValue": "",
       "metadata": {
         "description": "Name of public IP resource for mgmt interface"
       }
@@ -224,7 +224,7 @@
     },
     "UntrustPublicIPAddressName": {
       "type": "string",
-      "defaultValue": "vm-servies-pib-untrust",
+      "defaultValue": "",
       "metadata": {
         "description": "Name of public IP resource for untrust interface"
       }
@@ -318,7 +318,7 @@
     },
     "LoadBalancerType": {
       "type": "string",
-      "defaultValue" : "layer-4",
+      "defaultValue" : "layer-7",
       "allowedValues": [
         "layer-4",
         "layer-7"
