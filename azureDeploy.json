@@ -4,32 +4,28 @@
   "parameters": {
     "nsgName": {
       "type": "string",
-      "defaultValue": "nsg-default1"
     },
     "srcIPInboundNSG": {
        "type": "string",
        "metadata": {
            "description": "Your source public IP address. Added to the inbound NSG on eth0 (MGMT)"
        },
-       "defaultValue": "0.0.0.0/0"
     },
     "virtualNetworkName": {
       "type": "string",
-      "defaultValue": "vnet-FW",
       "metadata": {
         "description": "VNET name"
       }
     },
     "virtualNetworkExistingRGName": {
       "type": "string",
-      "defaultValue": "",
       "metadata": {
         "description": "Resource group of the VNET"
       }
     },
     "vnetNewOrExisting": {
             "type": "string",
-            "defaultValue": "new",
+            "defaultValue": "existing",
             "allowedValues": [
                 "new",
                 "existing"
