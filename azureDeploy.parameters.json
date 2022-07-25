@@ -48,7 +48,7 @@
       "value": "ELB-VPN-USE2-PIP1"
     },
     "availabilitySetName": {
-      "value": null
+      "value": "AS-GlobalProtect-USE2"
     },
     "platformFaultDomainCount": {
       "value": "3"
@@ -84,13 +84,13 @@
       "value": null
     },
     "MgmtPublicIPAddressName": {
-      "value": "vm-servies-pib-mgmt"
+      "value": null
     },
     "UntrustPublicIP": {
       "value": "none"
     },
     "UntrustPublicIPAddressName": {
-      "value": "vm-servies-pib-untrust"
+      "value": null
     },
     "UntrustPublicIPRGName": {
       "value": null
