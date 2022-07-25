@@ -9,7 +9,7 @@
       "value": "0.0.0.0/0"
     },
     "virtualNetworkName": {
-      "value": "vnet-FW"
+      "value": null
     },
     "virtualNetworkExistingRGName": {
       "value": "vn-transit-use2-01"
